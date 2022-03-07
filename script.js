@@ -51,12 +51,12 @@ function generatePassword(passwordLength, allowedCharacters){
   var passwordLength = passwordCharacterCount;
  
   // Reprompts if user selects a character count less than the min or more than the max
-  if (passwordLength < 8) {
+  if (passwordCharacterCount < 8) {
   alert ("Password must be at least 8 characters.");
-  passwordCharacterCount = parseInt(prompt("How many characters do you want in your password?"));
-  }  else if (passwordLength > 128) {
+  askAboutCharacterCount();
+  }  else if (passwordCharacterCount > 128) {
   alert ("Password can't be more than 128 characters.");
-  passwordCharacterCount = parseInt(prompt("How many characters do you want in your password?"));
+  askAboutCharacterCount();
   }
 
 
